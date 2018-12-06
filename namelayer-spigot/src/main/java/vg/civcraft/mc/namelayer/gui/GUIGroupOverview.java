@@ -129,7 +129,7 @@ public class GUIGroupOverview {
 		}
 
 		// close button
-		ItemStack backToOverview = new ItemStack(Material.WOOD_DOOR);
+		ItemStack backToOverview = new ItemStack(Material.OAK_DOOR);
 		ISUtils.setName(backToOverview, ChatColor.GOLD + "Close");
 		ci.setSlot(new Clickable(backToOverview) {
 
@@ -166,7 +166,7 @@ public class GUIGroupOverview {
 				ISUtils.addLore(is, ChatColor.AQUA + "Your rank: Member");
 				break;
 			case MODS:
-				is = new ItemStack(Material.GOLD_CHESTPLATE);
+				is = new ItemStack(Material.GOLDEN_CHESTPLATE);
 				ISUtils.addLore(is, ChatColor.AQUA + "Your rank: Mod");
 				break;
 			case ADMINS:
