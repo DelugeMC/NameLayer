@@ -114,7 +114,7 @@ public class AdminFunctionsGUI extends AbstractGroupGUI {
 		ci.setSlot(deletionClick, 16);
 
 		// back button
-		ItemStack backToOverview = new ItemStack(Material.WOOD_DOOR);
+		ItemStack backToOverview = new ItemStack(Material.OAK_DOOR);
 		ISUtils.setName(backToOverview, ChatColor.GOLD + "Back to overview");
 		ci.setSlot(new Clickable(backToOverview) {
 
@@ -193,13 +193,11 @@ public class AdminFunctionsGUI extends AbstractGroupGUI {
 				ISUtils.addLore(info, ChatColor.RED
 						+ "Are you sure that you want to", ChatColor.RED
 						+ "transfer this group? You can not undo this!");
-				ItemStack yes = new ItemStack(Material.INK_SACK);
-				yes.setDurability((short) 10); // green
+				ItemStack yes = new ItemStack(Material.LIME_DYE);
 				ISUtils.setName(yes,
 						ChatColor.GOLD + "Yes, transfer	 " + g.getName()
 								+ " to " + playerName);
-				ItemStack no = new ItemStack(Material.INK_SACK);
-				no.setDurability((short) 1); // red
+				ItemStack no = new ItemStack(Material.ROSE_RED);
 				ISUtils.setName(no,
 						ChatColor.GOLD + "No, don't transfer " + g.getName());
 				confirmInv.setSlot(new Clickable(yes) {
@@ -241,11 +239,9 @@ public class AdminFunctionsGUI extends AbstractGroupGUI {
 		ISUtils.setName(info, ChatColor.GOLD + "Delete group");
 		ISUtils.addLore(info, ChatColor.RED + "Are you sure that you want to",
 				ChatColor.RED + "delete this group? You can not undo this!");
-		ItemStack yes = new ItemStack(Material.INK_SACK);
-		yes.setDurability((short) 10); // green
+		ItemStack yes = new ItemStack(Material.LIME_DYE);
 		ISUtils.setName(yes, ChatColor.GOLD + "Yes, delete " + g.getName());
-		ItemStack no = new ItemStack(Material.INK_SACK);
-		no.setDurability((short) 1); // red
+		ItemStack no = new ItemStack(Material.ROSE_RED);
 		ISUtils.setName(no, ChatColor.GOLD + "No, keep " + g.getName());
 		confirmInv.setSlot(new Clickable(yes) {
 

@@ -13,15 +13,15 @@ import vg.civcraft.mc.civmodcore.itemHandling.ISUtils;
 
 public class MenuUtils {
 	public static ItemStack toggleButton(boolean initState, String name, boolean canModify) {
-		ItemStack is = new ItemStack(Material.INK_SACK);
+		ItemStack is;
 		if (initState) {
-			is.setDurability((short) 10); //dye green
+			is = new ItemStack(Material.LIME_DYE);
 			if (canModify) {
 			ISUtils.addLore(is, ChatColor.GOLD + "Currently turned on", ChatColor.AQUA + "Click to turn off");
 			}
 		}
 		else {
-			is.setDurability((short) 1); //dye red
+			is = new ItemStack(Material.ROSE_RED);
 			if  (canModify) {
 			ISUtils.addLore(is, ChatColor.GOLD + "Currently turned off", ChatColor.AQUA + "Click to turn on");
 			}
